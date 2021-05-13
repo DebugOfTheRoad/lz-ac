@@ -1,0 +1,31 @@
+#server:
+#  port: 6000
+#spring:
+#  cloud:
+#    nacos:
+#      config:
+#        server-addr: ${nacos-addr}
+#        namespace: ${nacos-config-namespace}
+#        prefix: ${nacos-config-prefix}
+#        file-extension: ${nacos-config-file-extension}
+#      discovery:
+#        namespace: ${nacos-discovery-namespace}
+#        server-addr: ${nacos-addr}
+#  profiles:
+#    active:${profile.active}
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      config:
+        server-addr: 192.168.4.103:8848
+        namespace: 59692e2a-cfd2-452f-b892-84fc994b9066
+        prefix: lz-ac-gateway
+        file-extension: yaml
+
+      discovery:
+        namespace: 59692e2a-cfd2-452f-b892-84fc994b9066
+        server-addr: 192.168.4.103:8848
+  profiles:
+    active: dev
