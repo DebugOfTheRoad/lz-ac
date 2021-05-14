@@ -1,0 +1,8 @@
+com\lckjsoft\gateway\entity\GatewayRouteDefinition.class
+com\lckjsoft\gateway\exception\WithoutLoginException.class
+com\lckjsoft\gateway\controller\DynamicRouteController.class
+com\lckjsoft\gateway\entity\GatewayPredicateDefinition.class
+com\lckjsoft\gateway\service\DynamicRouteService.class
+com\lckjsoft\gateway\GatewayApplication.class
+com\lckjsoft\gateway\entity\GatewayFilterDefinition.class
+com\lckjsoft\gateway\constant\WebRequestRoutePrefix.class

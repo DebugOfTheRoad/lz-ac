@@ -10,10 +10,13 @@ spring:
           uri: lb://nacos-consumer-a
           predicates:
             - Path=/nacos-consumer-a/**
+  
         - id: nacos-consumer-b
           uri: lb://nacos-consumer-b
           predicates:
             - Path=/nacos-consumer-b/**
+      filters:
+        - StripPrefix=1
       discovery:
         locator:
           enabled: true

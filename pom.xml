@@ -13,21 +13,27 @@
         <module>authorization</module>
         <module>admin</module>
     </modules>
+        <!--
+        阿里爸爸spring-cloud-alibaba 版本
+        https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E
+        spring-boot和spring-cloud 需要版本匹配 晓得吧
+        https://docs.spring.io/spring-cloud/docs/Hoxton.SR8/reference/html/
+        -->
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <!--        spring-boot和spring-cloud 需要版本匹配 晓得吧
-                https://docs.spring.io/spring-cloud/docs/Hoxton.SR11/reference/html/
-        -->
-        <spring.boot.version>2.3.10.RELEASE</spring.boot.version>
-        <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
-        <nacos-discovery.version>0.2.4</nacos-discovery.version>
-        <nacos-config.version>0.2.4</nacos-config.version>
-        <nacos-discovery-spring.version>2.2.1.RELEASE</nacos-discovery-spring.version>
+
+        <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
+        <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
+        <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
+        <nacos-discovery-spring.version>2.2.5.RELEASE</nacos-discovery-spring.version>
         <nacos-config-spring.version>2.2.5.RELEASE</nacos-config-spring.version>
-        <gateway-cloud.version>2.2.8.RELEASE</gateway-cloud.version>
+        <gateway-cloud.version>2.2.5.RELEASE</gateway-cloud.version>
+<!--        <nacos-discovery.version>0.2.4</nacos-discovery.version>-->
+<!--        <nacos-config.version>0.2.4</nacos-config.version>-->
+
         <snakeyaml.version>1.28</snakeyaml.version>
     </properties>
 
@@ -51,21 +57,26 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+            </dependency>
 
             <!--
                版本 0.2.x.RELEASE 对应的是 Spring Boot 2.x 版本，
                版本 0.1.x.RELEASE 对应的是 Spring Boot 1.x 版本
             -->
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>nacos-discovery-spring-boot-starter</artifactId>
-                <version>${nacos-discovery.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>nacos-config-spring-boot-starter</artifactId>
-                <version>${nacos-config.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.boot</groupId>-->
+<!--                <artifactId>nacos-discovery-spring-boot-starter</artifactId>-->
+<!--                <version>${nacos-discovery.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba.boot</groupId>-->
+<!--                <artifactId>nacos-config-spring-boot-starter</artifactId>-->
+<!--                <version>${nacos-config.version}</version>-->
+<!--            </dependency>-->
 
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
@@ -86,6 +97,21 @@
                 <groupId>org.yaml</groupId>
                 <artifactId>snakeyaml</artifactId>
                 <version>${snakeyaml.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>2.2.8.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
+                <version>2.2.8.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                <version>2.2.8.RELEASE</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
