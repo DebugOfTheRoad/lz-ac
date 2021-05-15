@@ -62,22 +62,6 @@
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring-cloud-alibaba.version}</version>
             </dependency>
-
-            <!--
-               版本 0.2.x.RELEASE 对应的是 Spring Boot 2.x 版本，
-               版本 0.1.x.RELEASE 对应的是 Spring Boot 1.x 版本
-            -->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba.boot</groupId>-->
-<!--                <artifactId>nacos-discovery-spring-boot-starter</artifactId>-->
-<!--                <version>${nacos-discovery.version}</version>-->
-<!--            </dependency>-->
-<!--            <dependency>-->
-<!--                <groupId>com.alibaba.boot</groupId>-->
-<!--                <artifactId>nacos-config-spring-boot-starter</artifactId>-->
-<!--                <version>${nacos-config.version}</version>-->
-<!--            </dependency>-->
-
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>

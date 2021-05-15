@@ -1,9 +1,0 @@
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\service\DynamicRouteService.java
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\GatewayApplication.java
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\constant\WebRequestRoutePrefix.java
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\entity\GatewayFilterDefinition.java
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\entity\GatewayRouteDefinition.java
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\controller\DynamicRouteController.java
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\entity\GatewayPredicateDefinition.java
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\filter\AuthorizationFilter.java
-D:\project\lz-ac\gateway\src\main\java\com\lckjsoft\gateway\exception\WithoutLoginException.java
