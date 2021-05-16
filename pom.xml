@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.lckjsoft</groupId>
-    <artifactId>lz-ac</artifactId>
+    <artifactId>lz-gq</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
-        <module>gateway</module>
-        <module>authorization</module>
-        <module>admin</module>
+        <module>lz-gq-gateway</module>
+        <module>lz-gq-security</module>
+        <module>lz-gq-admin</module>
     </modules>
         <!--
         阿里爸爸spring-cloud-alibaba 版本
@@ -30,7 +30,9 @@
         <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
         <nacos-discovery-spring.version>2.2.5.RELEASE</nacos-discovery-spring.version>
         <nacos-config-spring.version>2.2.5.RELEASE</nacos-config-spring.version>
+        <sentinel-cloud.version>2.2.5.RELEASE</sentinel-cloud.version>
         <gateway-cloud.version>2.2.5.RELEASE</gateway-cloud.version>
+        <sentinel.version>1.8.0</sentinel.version>
 <!--        <nacos-discovery.version>0.2.4</nacos-discovery.version>-->
 <!--        <nacos-config.version>0.2.4</nacos-config.version>-->
 
@@ -96,6 +98,22 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
                 <version>2.2.8.RELEASE</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${sentinel-cloud.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-spring-cloud-gateway-adapter</artifactId>
+                <version>${sentinel.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-datasource-nacos</artifactId>
+                <version>${sentinel.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

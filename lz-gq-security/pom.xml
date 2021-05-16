@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lz-gq</artifactId>
+        <groupId>com.lckjsoft</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>lz-gq-security</artifactId>
+    <packaging>pom</packaging>
+    <description>
+        认证授权中心类库 \
+        作为通用类库处理
+        springboot+springcloud可同时使用
+    </description>
+    <modules>
+        <module>lz-gq-security-authorization</module>
+        <module>lz-gq-security-authentication</module>
+    </modules>
+
+
+</project>
