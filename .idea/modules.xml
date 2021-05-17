@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/admin/admin.iml" filepath="$PROJECT_DIR$/admin/admin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/authorization/authorization.iml" filepath="$PROJECT_DIR$/authorization/authorization.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
-      <module fileurl="file://$PROJECT_DIR$/lz-ac.iml" filepath="$PROJECT_DIR$/lz-ac.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-boot-api-simple/spring-boot-api-simple.iml" filepath="$PROJECT_DIR$/spring-boot-api-simple/spring-boot-api-simple.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq.iml" filepath="$PROJECT_DIR$/lz-gq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq-admin/lz-gq-admin.iml" filepath="$PROJECT_DIR$/lz-gq-admin/lz-gq-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq-security/lz-gq-auth-sdk/lz-gq-auth-sdk.iml" filepath="$PROJECT_DIR$/lz-gq-security/lz-gq-auth-sdk/lz-gq-auth-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq-common/lz-gq-common.iml" filepath="$PROJECT_DIR$/lz-gq-common/lz-gq-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq-gateway/lz-gq-gateway.iml" filepath="$PROJECT_DIR$/lz-gq-gateway/lz-gq-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq-redis/lz-gq-redis.iml" filepath="$PROJECT_DIR$/lz-gq-redis/lz-gq-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq-security/lz-gq-security.iml" filepath="$PROJECT_DIR$/lz-gq-security/lz-gq-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq-security/lz-gq-security-authentication/lz-gq-security-authentication.iml" filepath="$PROJECT_DIR$/lz-gq-security/lz-gq-security-authentication/lz-gq-security-authentication.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lz-gq-security/lz-gq-security-authorization/lz-gq-security-authorization.iml" filepath="$PROJECT_DIR$/lz-gq-security/lz-gq-security-authorization/lz-gq-security-authorization.iml" />
     </modules>
   </component>
 </project>
