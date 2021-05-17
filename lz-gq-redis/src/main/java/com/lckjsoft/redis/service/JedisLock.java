@@ -20,6 +20,7 @@ import java.util.Map;
 @Slf4j
 public class JedisLock {
 
+
     @Autowired
     private JedisService jedisService;
     private Thread currentThread;
@@ -27,6 +28,8 @@ public class JedisLock {
     private String lockKey;
     /** 过期时间，单位：秒 */
     private int expires;
+
+    public JedisLock(){}
 
     public JedisLock(Object lockKey) {
         this.lockKey = "lock:" + lockKey;

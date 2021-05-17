@@ -2,27 +2,32 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="authorization" />
-        <module name="gateway" />
-        <module name="spring-boot-api-simple" />
-        <module name="admin" />
+        <module name="lz-gq-gateway" />
+        <module name="lz-gq-common" />
+        <module name="lz-gq-security-authorization" />
+        <module name="lz-gq-auth" />
+        <module name="lz-gq-auth-sdk" />
+        <module name="lz-gq-security-authentication" />
+        <module name="lz-gq-redis" />
+        <module name="lz-gq-admin" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="admin" target="1.5" />
-      <module name="authorization" target="1.5" />
-      <module name="gateway" target="1.8" />
-      <module name="lz-ac" target="1.5" />
-      <module name="spring-boot-api-simple" target="1.8" />
+    <bytecodeTargetLevel target="8">
+      <module name="lz-gq" target="1.8" />
+      <module name="lz-gq-admin" target="1.8" />
+      <module name="lz-gq-auth" target="1.8" />
+      <module name="lz-gq-auth-sdk" target="1.8" />
+      <module name="lz-gq-common" target="1.8" />
+      <module name="lz-gq-gateway" target="1.8" />
+      <module name="lz-gq-redis" target="1.8" />
+      <module name="lz-gq-security" target="1.8" />
+      <module name="lz-gq-security-authentication" target="1.8" />
+      <module name="lz-gq-security-authorization" target="1.8" />
     </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="spring-boot-api-simple" options="-parameters" />
-    </option>
   </component>
 </project>

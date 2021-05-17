@@ -14,6 +14,7 @@
         <module>lz-gq-admin</module>
         <module>lz-gq-redis</module>
         <module>lz-gq-common</module>
+        <module>lz-gq-auth</module>
     </modules>
         <!--
         阿里爸爸spring-cloud-alibaba 版本
@@ -25,6 +26,8 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
         <java.version>1.8</java.version>
 
         <spring.boot.version>2.3.2.RELEASE</spring.boot.version>
@@ -35,6 +38,8 @@
         <sentinel-cloud.version>2.2.5.RELEASE</sentinel-cloud.version>
         <gateway-cloud.version>2.2.5.RELEASE</gateway-cloud.version>
         <sentinel.version>1.8.0</sentinel.version>
+        <mybatis.version>3.5.6</mybatis.version>
+        <swagger.version>2.9.2</swagger.version>
 <!--        <nacos-discovery.version>0.2.4</nacos-discovery.version>-->
 <!--        <nacos-config.version>0.2.4</nacos-config.version>-->
 
@@ -66,6 +71,9 @@
                 <artifactId>spring-cloud-alibaba-dependencies</artifactId>
                 <version>${spring-cloud-alibaba.version}</version>
             </dependency>
+
+
+
             <dependency>
                 <groupId>com.alibaba.cloud</groupId>
                 <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
@@ -116,6 +124,44 @@
                 <groupId>com.alibaba.csp</groupId>
                 <artifactId>sentinel-datasource-nacos</artifactId>
                 <version>${sentinel.version}</version>
+            </dependency>
+
+
+
+
+<!--            丝袜哥-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.4.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-oauth2</artifactId>
+                <version>2.2.5.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.22</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.4</version>
             </dependency>
 
         </dependencies>
@@ -194,6 +240,15 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>2.3.5.RELEASE</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
 
             </plugin>
         </plugins>

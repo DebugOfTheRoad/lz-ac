@@ -11,6 +11,7 @@
 #          predicates:
 #            - Path=/sa/**
 #
+#
 #        - id: nacos-consumer-b
 #          uri: lb://nacos-consumer-b
 #          predicates:

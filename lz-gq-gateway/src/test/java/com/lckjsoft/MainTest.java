@@ -17,4 +17,9 @@ public class MainTest {
         String ruleDir = System.getProperty("user.home") + "/gateway/rules";
         System.out.println(ruleDir);
     }
+
+    @Test
+    public void testV(){
+//        System.out.println("===>"+Long.valueOf(""));
+    }
 }

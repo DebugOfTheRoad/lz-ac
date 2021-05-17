@@ -8,7 +8,7 @@ spring:
       config:
         server-addr: ${nacos-addr}
         namespace: ${nacos-config-namespace}
-        prefix: ${nacos-config-prefix}
+        prefix: ${nnacos-gateway-prefix}
         file-extension: ${nacos-config-file-extension}
       discovery:
         namespace: ${nacos-discovery-namespace}

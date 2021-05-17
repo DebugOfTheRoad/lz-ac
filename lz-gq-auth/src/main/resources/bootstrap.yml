@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: ${profile.active}
+  application:
+    name: oauth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos-addr}
+        namespace: ${nacos-discovery-namespace}
+      config:
+        server-addr: ${nacos-addr}
+        namespace: ${nacos-config-namespace}
+        prefix: ${nacos-oauth-prefix}
+        file-extension: ${nacos-config-file-extension}
+
