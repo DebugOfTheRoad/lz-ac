@@ -5,7 +5,9 @@ import com.lckjsoft.common.util.NullUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPubSub;
@@ -21,8 +23,8 @@ import java.util.*;
  * @Modified By:
  * @Modified Date:      2021/5/16
  */
-@Component
-@Slf4j
+//@Slf4j
+@Service
 public class JedisService {
 
     @Autowired
@@ -99,7 +101,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis setTimeout key["+key+"]exception : ",e);
+            System.out.printf("redis setTimeout key["+key+"]exception : ",e);
         } finally{
             returnResource(jedis);
         }
@@ -120,7 +122,7 @@ public class JedisService {
                 return true;
             }
         } catch (Exception e) {
-            log.error("redis setTimeout keys exception : ",e);
+            System.out.printf("redis setTimeout keys exception : ",e);
         }
         return false;
     }
@@ -173,7 +175,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis set key["+key+"]exception: ",e);
+            System.out.printf("redis set key["+key+"]exception: ",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -213,7 +215,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis set key byte exception: ",e);
+            System.out.printf("redis set key byte exception: ",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -247,7 +249,7 @@ public class JedisService {
                 }
             }
         }catch (Exception e) {
-            log.error("redis lpush key["+key+"]exception : ",e);
+            System.out.printf("redis lpush key["+key+"]exception : ",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -270,7 +272,7 @@ public class JedisService {
                 }
             }
         }catch (Exception e) {
-            log.error("redis publish key["+key+"]exception : ", e);
+            System.out.printf("redis publish key["+key+"]exception : ", e);
         } finally{
             this.returnResource(jedis);
         }
@@ -289,7 +291,7 @@ public class JedisService {
                 return true;
             }
         }catch (Exception e) {
-            log.error("redis subscribe key["+key+"]exception : ",e);
+            System.out.printf("redis subscribe key["+key+"]exception : ",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -315,7 +317,7 @@ public class JedisService {
                 }
             }
         }catch (Exception e) {
-            log.error("redis hset key["+key+"]exception : ",e);
+            System.out.printf("redis hset key["+key+"]exception : ",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -339,7 +341,7 @@ public class JedisService {
                 }
             }
         }catch (Exception e) {
-            log.error("redis zremove key["+key+"]exception : ",e);
+            System.out.printf("redis zremove key["+key+"]exception : ",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -367,7 +369,7 @@ public class JedisService {
                 }
             }
         }catch (Exception e) {
-            log.error("redis zadd key["+key+"]exception : ",e);
+            System.out.printf("redis zadd key["+key+"]exception : ",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -393,7 +395,7 @@ public class JedisService {
                 }
             }
         }catch (Exception e) {
-            log.error("redis del key["+key+"] exception:",e);
+            System.out.printf("redis del key["+key+"] exception:",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -415,7 +417,7 @@ public class JedisService {
                 }
             }
         }catch (Exception e) {
-            log.error("redis del key byte exception", e);
+            System.out.printf("redis del key byte exception", e);
         } finally{
             this.returnResource(jedis);
         }
@@ -449,7 +451,7 @@ public class JedisService {
                 }
             }
         }catch (Exception e) {
-            log.error("redis del key["+key+"] exception:",e);
+            System.out.printf("redis del key["+key+"] exception:",e);
         } finally{
             this.returnResource(jedis);
         }
@@ -480,7 +482,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis keys exception : ", e);
+            System.out.printf("redis keys exception : ", e);
         } finally {
             this.returnResource(jedis);
         }
@@ -503,7 +505,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis keysByte exception : ", e);
+            System.out.printf("redis keysByte exception : ", e);
         } finally {
             this.returnResource(jedis);
         }
@@ -526,7 +528,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis zcount exception : ", e);
+            System.out.printf("redis zcount exception : ", e);
         } finally {
             this.returnResource(jedis);
         }
@@ -552,7 +554,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis get exception : ", e);
+            System.out.printf("redis get exception : ", e);
         } finally {
             this.returnResource(jedis);
         }
@@ -574,7 +576,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis get byte exception : ", e);
+            System.out.printf("redis get byte exception : ", e);
         } finally {
             this.returnResource(jedis);
         }
@@ -600,7 +602,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis rpop exception : ", e);
+            System.out.printf("redis rpop exception : ", e);
         } finally {
             this.returnResource(jedis);
         }
@@ -630,7 +632,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis brpop exception : ", e);
+            System.out.printf("redis brpop exception : ", e);
         } finally {
             this.returnResource(jedis);
         }
@@ -655,7 +657,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis hget exception : ", e);
+            System.out.printf("redis hget exception : ", e);
         } finally {
             this.returnResource(jedis);
         }
@@ -687,7 +689,7 @@ public class JedisService {
         try {
             if (jedis != null && NullUtil.isNotNull(key)) {
                 String type = jedis.type(key.getBytes(ConstantUtil.UTF8));
-                log.info("redis key[" + key + "]'s type is : " + type);
+                System.out.printf("redis key[" + key + "]'s type is : " + type);
                 if ("hash".equals(type)) {
                     // hset
                     return jedis.hget(key.getBytes(ConstantUtil.UTF8), field.getBytes(ConstantUtil.UTF8));
@@ -712,7 +714,7 @@ public class JedisService {
                 }
             }
         } catch (Exception e) {
-            log.error("redis getKeyValue exception : ", e);
+            System.out.printf("redis getKeyValue exception : ", e);
         }
         return null;
     }

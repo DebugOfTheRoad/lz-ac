@@ -151,4 +151,9 @@ public class GatewayConfiguration {
         exceptionHandler.setMessageReaders(this.serverCodecConfigurer.getReaders());
         return exceptionHandler;
     }
+
+//    @Bean
+//    public JedisService jedisService(){
+//        return new JedisService();
+//    }
 }

@@ -1,6 +1,5 @@
 package com.lckjsoft.gateway.exception;
 
-import cn.hutool.core.lang.Assert;
 import com.lckjsoft.common.base.JsonResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler;
@@ -11,6 +10,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.codec.HttpMessageReader;
 import org.springframework.http.codec.HttpMessageWriter;
 import org.springframework.http.server.reactive.ServerHttpRequest;
+import org.springframework.util.Assert;
 import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.RequestPredicates;
 import org.springframework.web.reactive.function.server.RouterFunctions;
@@ -92,8 +92,8 @@ public class JsonExceptionHandler implements ErrorWebExceptionHandler {
 		String ip = request.getRemoteAddress().getAddress().toString();
 		// 错误记录
 		log.error("[全局异常处理]异常请求路径:", path,
-				"执行方法:", methodName, 
-				"ip:", ip, 
+				"执行方法:", methodName,
+				"ip:", ip,
 				"记录异常信息:", body.toString());
 		// 参考AbstractErrorWebExceptionHandler
 		if (exchange.getResponse().isCommitted()) {

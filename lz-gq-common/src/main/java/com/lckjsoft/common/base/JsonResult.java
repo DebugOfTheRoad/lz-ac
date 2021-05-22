@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @SuppressWarnings("unchecked")
+
 public class JsonResult<T> implements Serializable {
 
     private static final long serialVersionUID = -2410539351914134704L;
@@ -29,6 +30,22 @@ public class JsonResult<T> implements Serializable {
 
     public void setDatas(T[] datas) {
         this.datas = datas;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public T getData() {
+        return data;
+    }
+
+    public T[] getDatas() {
+        return datas;
     }
 
     public static <T> JsonResult<T> success() {
