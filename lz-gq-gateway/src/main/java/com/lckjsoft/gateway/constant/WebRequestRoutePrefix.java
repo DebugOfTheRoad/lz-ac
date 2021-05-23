@@ -30,5 +30,5 @@ package com.lckjsoft.gateway.constant;
  *  StripPrefix读经的整数即对应层数，如a，b，转发时会去掉/的第一层
  */
 public class WebRequestRoutePrefix {
-    public final static String ROUTE_PREFIX="/gateway";
+    public final static String ROUTE_PREFIX="";
 }

@@ -1,0 +1,15 @@
+
+spring:
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: www.lckjsoft.com:8848
+        namespace: 59692e2a-cfd2-452f-b892-84fc994b9066
+      config:
+        server-addr: www.lckjsoft.com:8848
+        prefix: nacos-gateway
+        file-extension: yaml 
+  application:
+    name: admin

@@ -1,0 +1,15 @@
+
+spring:
+  profiles:
+    active: ${profile.active}
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos-addr}
+        namespace: ${nacos-discovery-namespace}
+      config:
+        server-addr: ${nacos-addr}
+        prefix: ${nacos-gateway-prefix}
+        file-extension: ${nacos-config-file-extension}
+  application:
+    name: admin

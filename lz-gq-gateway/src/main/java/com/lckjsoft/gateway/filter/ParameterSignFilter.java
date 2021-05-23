@@ -29,7 +29,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  */
 @Component
 @RefreshScope //动态获取配置中心的配置
-public class AuthorizationFilter implements GlobalFilter, Ordered {
+public class ParameterSignFilter implements GlobalFilter, Ordered {
 
 
     //配置项列举

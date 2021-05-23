@@ -16,6 +16,8 @@ public class JsonResult<T> implements Serializable {
     private T data;
     private T[] datas;
 
+
+
     public void setCode(int code) {
         this.code = code;
     }
@@ -132,6 +134,13 @@ public class JsonResult<T> implements Serializable {
     public static <T> JsonResult<T> error(String message) {
         JsonResult<T> jsonResult = new JsonResult<T>();
         jsonResult.setCode(ConstantUtil.ERROR);
+        jsonResult.setMessage(message);
+        return jsonResult;
+    }
+
+    public static <T> JsonResult<T> error(int scUnauthorized, String message) {
+        JsonResult<T> jsonResult = new JsonResult<T>();
+        jsonResult.setCode(scUnauthorized);
         jsonResult.setMessage(message);
         return jsonResult;
     }

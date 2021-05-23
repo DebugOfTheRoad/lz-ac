@@ -1,0 +1,32 @@
+{
+  "groups": [
+    {
+      "name": "com.lckjsoft.jwt",
+      "type": "com.lckjsoft.gateway.filter.JwtTokenFilter",
+      "sourceType": "com.lckjsoft.gateway.filter.JwtTokenFilter"
+    },
+    {
+      "name": "oauth2.security",
+      "type": "com.lckjsoft.gateway.config.IgnoreUrlsConfig",
+      "sourceType": "com.lckjsoft.gateway.config.IgnoreUrlsConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "com.lckjsoft.jwt.object-mapper",
+      "type": "com.fasterxml.jackson.databind.ObjectMapper",
+      "sourceType": "com.lckjsoft.gateway.filter.JwtTokenFilter"
+    },
+    {
+      "name": "com.lckjsoft.jwt.skip-auth-urls",
+      "type": "java.lang.String[]",
+      "sourceType": "com.lckjsoft.gateway.filter.JwtTokenFilter"
+    },
+    {
+      "name": "oauth2.security.ignoreurls",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.lckjsoft.gateway.config.IgnoreUrlsConfig"
+    }
+  ],
+  "hints": []
+}

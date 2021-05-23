@@ -45,6 +45,7 @@
 <!--        <nacos-config.version>0.2.4</nacos-config.version>-->
 
         <snakeyaml.version>1.28</snakeyaml.version>
+        <jjwt.version>0.9.1</jjwt.version>
     </properties>
 
 <!--    依赖管理-->
@@ -166,6 +167,11 @@
                 <version>${hutool-all.version}</version>
             </dependency>
 
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
